@@ -1,0 +1,23 @@
+.navbar {
+    background-color: #c13c3c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo a {
+    color: rgb(240, 224, 47);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links a {
+    margin-left: 20px;
+    color: white;
+  }
+  
+  .navbar-links a:hover {
+    color: #a594f9;
+  }
+  
