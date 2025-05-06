@@ -3,6 +3,10 @@ import './Navbar.css';
 
 const Navbar = () => {
   return (
+    <div className="homepage">
+  <h1>Welcome to Shoplicity</h1>
+  <p>Buy & sell any and everything</p>
+
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">💳 Shoplicity</Link>
@@ -13,6 +17,7 @@ const Navbar = () => {
         <Link to="/login">Login 🔓</Link>
       </div>
     </nav>
+    </div>
   );
 };
 
