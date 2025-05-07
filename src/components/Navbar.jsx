@@ -11,6 +11,10 @@ const Navbar = () => {
       <div className="navbar-logo">
         <Link to="/">💳 Shoplicity</Link>
       </div>
+      <div className="navbar-search">
+    <input type="text" placeholder="Search..." />
+    <button>Search</button>
+  </div>
       <div className="navbar-links">
         <Link to="/">Home 🏚️</Link>
         <Link to="/cart">Cart 🛒</Link>
