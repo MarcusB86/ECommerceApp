@@ -1,0 +1,105 @@
+   .navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #c13c3c;
+    color: white;
+    display: flex;
+    justify-content: center; /* centers the content block */
+    animation: fadeIn 1.4s ease-in-out;
+    padding: 1rem 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  .navbar-logo a {
+    color: rgb(240, 224, 47);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-links a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: larger;
+  }
+  
+  .navbar-links a:hover {
+    color: #a594f9;
+  }
+  .navbar-links {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .homepage {
+    height: 100vh;
+    width: 100vw; 
+    background-image: url('https://webandcrafts.com/_next/image?url=https%3A%2F%2Fadmin.wac.co%2Fuploads%2FWhat_is_E_commerce_and_What_are_its_Applications_2_d2eb0d4402.jpg&w=4500&q=90');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(176, 213, 41);
+    text-shadow: 1px 1px 5px #000;
+  }
+
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .navbar-search input {
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .navbar-search button {
+    padding: 8px 12px;
+    background-color: rgb(240, 224, 47);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-search button:hover {
+    background-color: #8a7ce0;
+  }
+  
+  
+  
