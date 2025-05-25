@@ -1,26 +1,25 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 const Navbar = () => {
-  return (
-    <div className="homepage">
-  <h1>Welcome to Shoplicity</h1>
-  <p>Buy & sell any and everything</p>
+  const { user, logout } = useContext(AuthContext);
 
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to="/">💳 Shoplicity</Link>
-      </div>
-      <div className="navbar-search">
-    <input type="text" placeholder="Search..." />
-    <button>Search</button>
-  </div>
+  return (
+    <div className="navbar">
+      <Link to="/">💳 Shoplicity</Link>
       <div className="navbar-links">
         <Link to="/">Home 🏚️</Link>
         <Link to="/cart">Cart 🛒</Link>
-        <Link to="/login">Login 🔓</Link>
+        {user ? (
+          <>
+            <span>Welcome, {user.email}</span>
+            <button onClick={logout}>Logout 🔒</button>
+          </>
+        ) : (
+          <Link to="/login">Login 🔓</Link>
+        )}
       </div>
-    </nav>
     </div>
   );
 };
