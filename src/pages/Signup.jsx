@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Signup = () => {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const validate = () => {
     if (!form.name || !form.email || !form.password) {
@@ -28,12 +30,10 @@ const Signup = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', form);
-      alert('Signup successful!');
-      console.log(res.data);
+      await axios.post('http://localhost:5000/api/auth/signup', form);
+      navigate('/login'); // redirect to login page after signup
     } catch (err) {
       setError('Signup failed. Try again.');
-      console.error(err);
     }
   };
 
