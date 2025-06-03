@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Products from './components/Products';
 import Signup from "./pages/Signup";
 // import Cart from './components/Cart';
-// import Login from './components/Login';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Products />} />
         {/* <Route path="/cart" element={<Cart />} /> */}
         <Route path="/signup" element={<Signup />} />
-        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
