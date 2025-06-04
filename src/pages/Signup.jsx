@@ -31,9 +31,10 @@ const Signup = () => {
 
     try {
       await axios.post('http://localhost:5000/api/auth/signup', form);
-      navigate('/login'); // redirect to login page after signup
+      navigate('/login');
     } catch (err) {
-      setError('Signup failed. Try again.');
+        console.error(err.response?.data || err.message);
+        setError('Signup failed: ' + (err.response?.data?.message || err.message));
     }
   };
 

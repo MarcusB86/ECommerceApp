@@ -1,9 +1,14 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useAuth } from '../context/AuthContext';
+
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   const validate = () => {
     if (!form.email || !form.password) {
@@ -26,11 +31,10 @@ const Login = () => {
 
     try {
       const res = await axios.post('http://localhost:5000/api/auth/login', form);
-      alert('Login successful!');
-      console.log(res.data);
+      login(res.data.token);
+      navigate('/dashboard');
     } catch (err) {
       setError('Login failed. Check your credentials.');
-      console.error(err);
     }
   };
 
