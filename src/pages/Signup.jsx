@@ -44,6 +44,7 @@ const Signup = () => {
   };
 
   return (
+    <div className="auth-container">
     <form onSubmit={handleSubmit}>
       <h2>Sign Up</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -52,6 +53,7 @@ const Signup = () => {
       <input name="password" placeholder="Password" type="password" value={form.password} onChange={handleChange} />
       <button type="submit">Sign Up</button>
     </form>
+    </div>
   );
 };
 
