@@ -1,0 +1,114 @@
+/* Container for the form */
+form {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 2rem 2.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Form heading */
+  form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #4a4a4a;
+  }
+  
+  /* Inputs */
+  form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: 1.8px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: #7b5cff;
+    box-shadow: 0 0 6px #7b5cff66;
+  }
+  
+  /* Error message */
+  form p {
+    color: #ff4d4d;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  /* Submit button */
+  form button {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background-color: #7b5cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #5a40cc;
+  }
+  
+  /* Placeholder styling */
+  form input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  /* Optional: Smooth font scaling on smaller screens */
+  @media (max-width: 480px) {
+    form {
+      margin: 2rem 1rem;
+      padding: 1.5rem 1.75rem;
+    }
+  }
+  /* Position the navbar fixed at the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* Center content inside the navbar */
+.nav-content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Style the links and button */
+.navbar a,
+.navbar button,
+.navbar span {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar button:hover,
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+  
