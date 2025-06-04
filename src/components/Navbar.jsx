@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/" className="nav-link">🏠 Home</Link>
+        <Link to="/" className="nav-link"> SHOPLICITY 🏠 Home</Link>
         <Link to="/cart" className="nav-link">🛒 Cart</Link>
       </div>
 
@@ -22,7 +22,7 @@ const Navbar = () => {
         ) : (
           <>
             <Link to="/login" className="nav-link">🔓 Login</Link>
-            <Link to="/signup" className="signup-btn">📝 Sign Up</Link>
+            <Link to="/signup" className="signup-btn">📝Sign Up</Link>
           </>
         )}
       </div>
