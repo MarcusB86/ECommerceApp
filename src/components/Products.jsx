@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import './Products.css';
+import { CartContext } from '../context/CartContext';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     axios.get('http://localhost:5000/api/products')
@@ -21,7 +23,9 @@ const Products = () => {
             <h3>{product.name}</h3>
             <p className="product-price">${product.price}</p>
             <p className="product-description">{product.description}</p>
-            <button>Add to Cart</button>
+            <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
+              Add to Cart
+            </button>
           </div>
         ))}
       </div>
