@@ -15,16 +15,18 @@ const Navbar = () => {
 
       <div className="navbar-right">
         {user ? (
-          <>
-            <span className="user-email">👤 {user.email}</span>
-            <button className="logout-btn" onClick={logout}>Logout</button>
-          </>
-        ) : (
-          <>
-            <Link to="/login" className="nav-link">🔓 Login</Link>
-            <Link to="/signup" className="signup-btn">📝Sign Up</Link>
-          </>
-        )}
+  <>
+    <Link to="/profile" className="nav-link">👤 Profile</Link>
+    <span className="user-email">{user.email}</span>
+    <button className="logout-btn" onClick={logout}>Logout</button>
+  </>
+) : (
+  <>
+    <Link to="/login" className="nav-link">🔓 Login</Link>
+    <Link to="/signup" className="signup-btn">📝 Sign Up</Link>
+  </>
+)}
+
       </div>
     </nav>
   );
