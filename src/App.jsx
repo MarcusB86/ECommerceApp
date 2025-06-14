@@ -4,8 +4,8 @@ import Products from './components/Products';
 import Signup from "./pages/Signup";
 import Cart from './pages/Cart';
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-import PrivateRoute from './components/PrivateRoute'; // Make sure you have this
+import PrivateRoute from './components/PrivateRoute';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -16,14 +16,11 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/dashboard"
-          element={
-            <PrivateRoute>
-              <Dashboard />
-            </PrivateRoute>
-          }
-        />
+        <Route path="/profile" element={
+  <PrivateRoute>
+    <Profile />
+  </PrivateRoute>
+} />
       </Routes>
     </>
   );

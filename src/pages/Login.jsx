@@ -32,7 +32,7 @@ const Login = () => {
     try {
       const res = await axios.post('http://localhost:5000/api/auth/login', form);
       login(res.data.token);
-      navigate('/dashboard');
+      navigate('/profile');
     } catch (err) {
       setError('Login failed. Check your credentials.');
     }
