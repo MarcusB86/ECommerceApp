@@ -1,60 +1,123 @@
+/* Cart container styling */
 .cart-container {
-  max-width: 800px;
-  margin: 3rem auto;
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 2rem;
-  background: #fff;
+  background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Page heading */
 .cart-container h2 {
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
+  color: #333;
 }
 
+/* Cart items list */
 .cart-list {
   list-style: none;
   padding: 0;
+  margin-bottom: 2rem;
 }
 
+/* Individual cart item */
 .cart-item {
   display: flex;
-  gap: 1rem;
   align-items: center;
   margin-bottom: 1.5rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
 }
 
+/* Product image */
 .cart-item img {
   width: 100px;
-  height: auto;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 1.5rem;
+  border: 1px solid #ddd;
   border-radius: 8px;
 }
 
-.cart-item h3 {
-  margin: 0;
+/* Item details */
+.cart-item-details {
+  flex-grow: 1;
 }
 
-.cart-item button {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #e63946;
-  color: white;
+.cart-item-details h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.cart-item-details p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Remove button */
+.cart-item-details button {
+  background-color: #ff4d4d;
+  color: #fff;
   border: none;
+  padding: 0.5rem 0.8rem;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
+}
+
+.cart-item-details button:hover {
+  background-color: #e03e3e;
+}
+
+/* Summary and actions */
+.cart-summary {
+  text-align: center;
+}
+
+.cart-summary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Action buttons */
+.cart-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.clear-cart-btn,
+.checkout-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .clear-cart-btn {
-  background-color: #fca311;
+  background-color: #888;
   color: white;
-  padding: 0.8rem 1.2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  display: block;
-  margin: 2rem auto 0;
+}
+
+.clear-cart-btn:hover {
+  background-color: #666;
+}
+
+.checkout-btn {
+  background-color: #5e60ce;
+  color: white;
+}
+
+.checkout-btn:hover {
+  background-color: #4e4fcf;
 }
